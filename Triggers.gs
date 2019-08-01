@@ -10,8 +10,8 @@ function onOpen(e){
 function addMenu() {
   SpreadsheetApp
   .getUi()
-  //.createMenu('RUA') // toggle for add-on
-  .createAddonMenu()
+  .createMenu('RUA') // comment out for add-on
+  //.createAddonMenu() // uncomment for add-on
   .addItem('Run Analysis', 'run')
   .addItem('Get File Drop Folder Link', 'getFolderLink')
   .addToUi()
