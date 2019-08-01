@@ -4,6 +4,13 @@ function getFiles(folder){
  while(fileItr.hasNext()){
   files.push(fileItr.next())
  }
+  var folderItr = folder.getFolders()
+  while(folderItr.hasNext()){
+    getFiles(folderItr.next()).forEach(function(file){
+     files.push(file)
+    })
+   
+  }
  return files;
 
 }
